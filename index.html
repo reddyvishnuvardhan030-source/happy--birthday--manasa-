@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎉 Happy Birthday Manasa 🎉</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-container">
+            <div class="loading-text">
+                <h1>Preparing a Special Surprise...</h1>
+                <div class="loading-spinner"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div id="mainContainer" class="main-container">
+        <!-- Night Sky Background -->
+        <div class="sky-background">
+            <div class="stars"></div>
+        </div>
+
+        <!-- Audio Control Button -->
+        <button id="audioToggle" class="audio-toggle" title="Toggle Music">
+            <span class="audio-icon">🔊</span>
+        </button>
+
+        <!-- Hidden Audio Element -->
+        <audio id="bgMusic" loop>
+            <source src="https://cdn.pixabay.com/download/audio/2022/03/10/audio_1ce0ff1bef.mp3" type="audio/mpeg">
+        </audio>
+
+        <!-- Section 1: Welcome with Floating Elements -->
+        <section id="section1" class="section active">
+            <div class="section-content">
+                <h1 class="main-title">🎉 Happy Birthday Manasa 🎉</h1>
+                <p class="welcome-text">Get ready for a magical celebration...</p>
+                <button class="cta-button" onclick="nextSection()">Begin the Magic ✨</button>
+            </div>
+            <!-- Floating Balloons -->
+            <div class="balloons-container"></div>
+        </section>
+
+        <!-- Section 2: Animated Birthday Cake -->
+        <section id="section2" class="section">
+            <div class="section-content">
+                <h2 class="section-title">Make a Wish...</h2>
+                
+                <!-- Birthday Cake -->
+                <div class="cake-container">
+                    <div class="cake">
+                        <div class="cake-layer cake-layer-bottom"></div>
+                        <div class="cake-layer cake-layer-middle"></div>
+                        <div class="cake-layer cake-layer-top"></div>
+                    </div>
+
+                    <!-- Candles -->
+                    <div class="candles-container" id="candlesContainer">
+                        <div class="candle">
+                            <div class="flame"></div>
+                        </div>
+                        <div class="candle">
+                            <div class="flame"></div>
+                        </div>
+                        <div class="candle">
+                            <div class="flame"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blow the Candle Button -->
+                <button class="cta-button blow-button" id="blowButton" onclick="blowCandles()">
+                    🌬️ Blow the Candle
+                </button>
+            </div>
+        </section>
+
+        <!-- Section 3: Celebration -->
+        <section id="section3" class="section">
+            <div class="section-content">
+                <h2 class="section-title">🎊 Celebration Time! 🎊</h2>
+                <button class="cta-button" onclick="nextSection()">Open Your Letter ❤️</button>
+            </div>
+            <!-- Confetti Container -->
+            <div id="confettiContainer" class="confetti-container"></div>
+            <!-- Hearts Container -->
+            <div id="heartsContainer" class="hearts-container"></div>
+        </section>
+
+        <!-- Section 4: Letter -->
+        <section id="section4" class="section">
+            <div class="section-content">
+                <!-- Animated Envelope -->
+                <div class="envelope" id="envelope">
+                    <div class="envelope-body">
+                        <div class="envelope-flap"></div>
+                        <div class="envelope-front"></div>
+                    </div>
+                </div>
+
+                <!-- Birthday Letter -->
+                <div class="letter" id="letter">
+                    <div class="letter-content">
+                        <h2>Dear Manasa, 🌸</h2>
+                        <p>Wishing you a day filled with happiness, peace, laughter, and beautiful memories. May every dream you work toward become reality, and may this new year of your life bring success, good health, confidence, and endless reasons to smile.</p>
+                        <p>Keep shining, keep believing in yourself, and enjoy your special day.</p>
+                        <p style="margin-top: 2rem;">Have an amazing birthday! 🎂✨</p>
+                        <p style="margin-top: 1rem; font-size: 0.9em; opacity: 0.8;">With love and wishes,<br>Your Special Someone 💕</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Final Message -->
+        <section id="section5" class="section">
+            <div class="section-content">
+                <div class="final-message">
+                    <h2 class="glowing-text">Thank you for visiting this little surprise.</h2>
+                    <h3 class="glowing-text-secondary">Happy Birthday once again, Manasa! ❤️</h3>
+                </div>
+
+                <div class="button-group">
+                    <button class="cta-button" id="replayButton" onclick="replaySurprise()">
+                        🔄 Replay Surprise
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation Buttons -->
+        <div class="nav-buttons">
+            <button class="nav-button" id="prevButton" onclick="prevSection()">← Previous</button>
+            <button class="nav-button" id="nextButton" onclick="nextSection()">Next →</button>
+        </div>
+    </div>
+
+    <!-- Floating Elements Background -->
+    <div class="floating-elements">
+        <div id="butterfliesContainer" class="butterflies-container"></div>
+        <div id="petalsContainer" class="petals-container"></div>
+        <div id="sparklesContainer" class="sparkles-container"></div>
+    </div>
+
+    <!-- Fireworks Canvas -->
+    <canvas id="fireworksCanvas" class="fireworks-canvas"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>
